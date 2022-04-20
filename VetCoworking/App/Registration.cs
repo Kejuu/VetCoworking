@@ -1,5 +1,4 @@
-﻿using AQ.Core.Persistence;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using VetCoworking.Persistence;
 

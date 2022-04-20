@@ -1,24 +1,15 @@
 ﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
 using MassTransit;
 using MassTransit.Definition;
-using Microsoft.ApplicationInsights.AspNetCore.Extensions;
-using Microsoft.ApplicationInsights.Extensibility.Implementation;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using VetCoworking.App;
 using VetCoworking.App.Resgistration;
 
-namespace AQ.Projects.App
+namespace VetCoworking.App
 {
     [PrimaryConstructor]
     public partial class Startup

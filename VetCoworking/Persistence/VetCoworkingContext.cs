@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using VetCoworking.Domain.Models;
 
-namespace AQ.Core.Persistence
+namespace VetCoworking.Persistence
 {
     public partial class VetCoworkingContext : DbContext
     {
@@ -30,8 +30,7 @@ namespace AQ.Core.Persistence
         {
             modelBuilder.Entity<Booking>(entity =>
             {
-                entity.HasKey(e => e.Id)
-                    .IsClustered(false);
+                entity.HasKey(e => e.Id);
             });
         }
     }

@@ -1,8 +1,9 @@
 ﻿using VetCoworking.Domain.Abstractions;
 using VetCoworking.Domain.Models;
+using VetCoworking.Persistence;
 using VetCoworking.Persistence.Repositories.Common;
 
-namespace AQ.Core.Persistence.Repositories
+namespace VetCoworking.Repositories
 {
     public class BookingsRepository : EFRepository<Booking, VetCoworkingContext>, IBookingsRepository
     {

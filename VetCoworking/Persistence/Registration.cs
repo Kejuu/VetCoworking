@@ -1,7 +1,7 @@
-﻿using AQ.Core.Persistence.Repositories;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using VetCoworking.Domain.Abstractions;
+using VetCoworking.Repositories;
 
 namespace VetCoworking.Persistence
 {
