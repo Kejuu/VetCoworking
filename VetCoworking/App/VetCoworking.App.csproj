@@ -5,11 +5,6 @@
     <UserSecretsId>8a37298f-d7e6-488e-a5d0-cd74aee14e36</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AspNetCore.HealthChecks.AzureStorage" Version="6.0.3" />
-    <PackageReference Include="AspNetCore.HealthChecks.CosmosDb" Version="6.0.1" />
-    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="6.0.1" />
-    <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
-    <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="7.3.1" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.20.0" />
     <PackageReference Include="NSwag.AspNetCore" Version="13.10.7" />
     <PackageReference Include="PrimaryConstructor" Version="1.4.0" />

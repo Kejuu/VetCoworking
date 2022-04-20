@@ -1,6 +1,4 @@
 ﻿using System;
-using MassTransit;
-using MassTransit.Definition;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -19,11 +17,6 @@ namespace VetCoworking.App
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddGenericRequestClient();
-
-            services.AddSingleton<IEndpointNameFormatter>(provider => new KebabCaseEndpointNameFormatter(true));
-
-
             services.AddControllers();
 
             services.AddOpenApiDocument();
