@@ -75,6 +75,8 @@ namespace VetCoworking.App.Controllers
 
         /// <summary>
         /// Obtiene una reserva
+        /// Parametros de entrada: ID (EN LA URL)
+        /// Precondiciones: Haber insertado un booking y que este exista en la DB y corresponda a la ID ingresada   
         /// </summary>
         [HttpGet]
         [Route("get/{id}")]
