@@ -20,7 +20,7 @@ namespace VetCoworking.Persistence
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             return services
-                .AddTransient<IBookingsRepository, BookingsRepository>();
+                .AddScoped<IBookingsRepository, BookingsRepository>();
         }
     }
 }
