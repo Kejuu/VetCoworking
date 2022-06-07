@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetCoworking.Domain", "VetC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetCoworking.Persistence", "VetCoworking\Persistence\VetCoworking.Persistence.csproj", "{2B969653-8F44-452F-AC37-8AD4DF902B08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetCoworking.Test", "VetCoworking.Test\VetCoworking.Test.csproj", "{45846234-9F3C-4EC0-9424-B6B0916BCB1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetCoworking.Test", "VetCoworking.Test\VetCoworking.Test.csproj", "{45846234-9F3C-4EC0-9424-B6B0916BCB1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{B70BB1C5-E70C-4545-8420-CEF5C3FF9FC8}"
+	ProjectSection(SolutionItems) = preProject
+		dockerfile = dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
