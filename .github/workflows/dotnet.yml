@@ -41,8 +41,9 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
-        username: "kevin11062011@gmail.com"
-        password: "Kevinprohack123"
+        username: "Kejuu"
+        password: "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"
+        email: "kevin11062011@gmail.com"
 
     - name: Build image and push to Docker Hub and GitHub Container Registry
       uses: docker/build-push-action@v2
