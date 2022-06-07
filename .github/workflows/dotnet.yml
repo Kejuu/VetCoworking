@@ -30,7 +30,6 @@ jobs:
     - name: Docker
       run: docker build . --file dockerfile
     - name: docker push
-      run: 
-        docker push dockerfile
+      run: docker push dockerfile
 
     
