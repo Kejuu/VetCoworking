@@ -1,10 +1,7 @@
 trigger:
-  batch: true
   branches:
     include:
     - develop
-pool:
-    vmImage: 'ubuntu-latest'
 steps:
 - task: UseDotNet@2
   displayName: 'Use dotnet sdk 6.x'
