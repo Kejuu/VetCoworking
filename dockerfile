@@ -6,6 +6,6 @@ RUN dotnet publish "VetCoworking/App/VetCoworking.App.csproj"
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-focal
 WORKDIR /app
-COPY --from=build-env /app/out .
+COPY --from=build-env /app/ .
 
 ENTRYPOINT ["dotnet", "VetCoworking.App.dll"]
