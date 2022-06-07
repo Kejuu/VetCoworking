@@ -32,7 +32,7 @@ namespace VetCoworking.Test.Controllers
             //ACT
             var response = await controller.GetAll(default);
             //ASSERT
-            response.StatusCode.Should().BeGreaterThanOrEqualTo(202);
+            response.StatusCode.Should().Be(202);
         }
         [Test]
         public async Task GetById_ShouldReturn_HttpStatus_Accepted()
@@ -44,23 +44,19 @@ namespace VetCoworking.Test.Controllers
             //ACT
             var response = await controller.GetById(Guid.Parse("8429de76-c326-4c7e-bdc6-c4711fb22917"),default);
             //ASSERT
-            response.StatusCode.Should().BeGreaterThanOrEqualTo(202);
+            response.StatusCode.Should().Be(202);
         }
         [Test]
-        public async Task Update_ShouldReturn_HttpStatus_Accepted()
+        public async Task GetById_ShouldReturn_HttpStatus_NotFound()
         {
             var controller = new App.Controllers.BookingsController(BookingsRepository);
             controller.ControllerContext = new ControllerContext();
             controller.ControllerContext.HttpContext = new DefaultHttpContext();
 
             //ACT
-            var booking = new BookingModel
-            {
-                PatientName = "testname"
-            };
-            var response = await controller.UpdateBooking(booking, Guid.Parse("8429de76-c326-4c7e-bdc6-c4711fb22917"), default);
+            var response = await controller.GetById(Guid.Parse("8429de76-c123-4c7e-bdc6-c4711fb22917"), default);
             //ASSERT
-            response.StatusCode.Should().BeGreaterThanOrEqualTo(202);
+            response.StatusCode.Should().Be(404);
         }
 
 

@@ -21,6 +21,7 @@ namespace VetCoworking.Persistence
 
         private static DbContextOptions GetOptions(string connectionString)
         {
+          
             return NpgsqlDbContextOptionsBuilderExtensions.UseNpgsql(new DbContextOptionsBuilder(), connectionString).Options;
         }
 
