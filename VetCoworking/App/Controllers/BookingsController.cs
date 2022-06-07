@@ -88,7 +88,15 @@ namespace VetCoworking.App.Controllers
         {
 
             var booking = await IBookingsRepository.GetByIdAsync(id);
-            ContentResult contentResult = Content(JsonSerializer.Serialize(booking));
+            if (booking == null)
+            {
+                ContentResult content = new ContentResult();
+                content.StatusCode = 404;
+                return content;
+            }
+                ContentResult contentResult = Content(JsonSerializer.Serialize(booking));
+
+            
             contentResult.StatusCode = 202;
             return contentResult;
         }
