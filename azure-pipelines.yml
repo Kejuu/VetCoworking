@@ -1,0 +1,39 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - develop
+pool:
+    vmImage: 'ubuntu-latest'
+steps:
+- task: UseDotNet@2
+  displayName: 'Use dotnet sdk 6.x'
+  inputs:
+    version: 6.x
+    includePreviewVersions: false
+    
+- task: DotNetCoreCLI@2
+  displayName: build
+  inputs:
+    command: build
+    projects: 'VetCoworking/App/VetCoworking.App.csproj'
+    arguments: --output $(System.DefaultWorkingDirectory)/dist/VetCoworking --configuration Release
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet test'
+  inputs:
+    command: 'test'
+    arguments: '--configuration $(buildConfiguration) --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura'
+    publishTestResults: true
+    projects: 'VetCoworking.Test/VetCoworking.Test.csproj'
+- task: Docker@1
+  displayName: 'Build the Docker image'
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryEndpoint: 'Docker Hub'
+    command: 'Build an image'
+    dockerFile: '**/Dockerfile'
+    imageName: '$(ImageName)'
+    includeLatestTag: true
+    useDefaultContext: false
+    buildContext: '.'
