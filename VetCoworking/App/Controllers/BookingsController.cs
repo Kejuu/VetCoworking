@@ -60,7 +60,7 @@ namespace VetCoworking.App.Controllers
         [Route("update/{id}")]
         [ProducesResponseType(StatusCodes.Status202Accepted)]
 
-        public async Task<IActionResult> UpdateBooking([FromBody] BookingModel book, [FromRoute] Guid id, CancellationToken ct)
+        public async Task<ContentResult> UpdateBooking([FromBody] BookingModel book, [FromRoute] Guid id, CancellationToken ct)
         {
             var booking = new Booking
             {
@@ -69,8 +69,10 @@ namespace VetCoworking.App.Controllers
                 Start = book.Start,
                 End = book.End
             };
+            ContentResult contentResult = Content(JsonSerializer.Serialize(booking));
+            contentResult.StatusCode = 202;
             await IBookingsRepository.UpdateAsync(booking);
-            return Accepted();
+            return contentResult;
         }
 
         /// <summary>
@@ -82,11 +84,13 @@ namespace VetCoworking.App.Controllers
         [Route("get/{id}")]
         [ProducesResponseType(StatusCodes.Status202Accepted)]
 
-        public async Task<IActionResult> GetById([FromRoute] Guid id, CancellationToken ct)
+        public async Task<ContentResult> GetById([FromRoute] Guid id, CancellationToken ct)
         {
 
             var booking = await IBookingsRepository.GetByIdAsync(id);
-            return Content(JsonSerializer.Serialize(booking));
+            ContentResult contentResult = Content(JsonSerializer.Serialize(booking));
+            contentResult.StatusCode = 202;
+            return contentResult;
         }
 
         /// <summary>
@@ -96,11 +100,13 @@ namespace VetCoworking.App.Controllers
         [Route("get/all")]
         [ProducesResponseType(StatusCodes.Status202Accepted)]
 
-        public async Task<IActionResult> GetAll(CancellationToken ct)
+        public async Task<ContentResult> GetAll(CancellationToken ct)
         {
                 
             var bookings = await IBookingsRepository.ListAllAsync();
-            return Content(JsonSerializer.Serialize(bookings));
+            ContentResult contentResult = Content(JsonSerializer.Serialize(bookings));
+            contentResult.StatusCode = 202;
+            return contentResult;
         }
 
     }

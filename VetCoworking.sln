@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetCoworking.Domain", "VetC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetCoworking.Persistence", "VetCoworking\Persistence\VetCoworking.Persistence.csproj", "{2B969653-8F44-452F-AC37-8AD4DF902B08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetCoworking.Test", "VetCoworking.Test\VetCoworking.Test.csproj", "{45846234-9F3C-4EC0-9424-B6B0916BCB1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{2B969653-8F44-452F-AC37-8AD4DF902B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B969653-8F44-452F-AC37-8AD4DF902B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B969653-8F44-452F-AC37-8AD4DF902B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45846234-9F3C-4EC0-9424-B6B0916BCB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45846234-9F3C-4EC0-9424-B6B0916BCB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45846234-9F3C-4EC0-9424-B6B0916BCB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45846234-9F3C-4EC0-9424-B6B0916BCB1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
