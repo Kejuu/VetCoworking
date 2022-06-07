@@ -16,7 +16,8 @@ jobs:
     - name: docker login
       env:
         DOCKER_USER: "kejuwu"  
-        DOCKER_PASSWORD: "kevinprohack123" 
+        DOCKER_PASSWORD: "kevinprohack123"
+        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
