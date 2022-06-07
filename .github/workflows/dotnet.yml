@@ -14,10 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: docker login
-      env:
-        DOCKER_USER: "kejuwu"  
-        DOCKER_PASSWORD: "kevinprohack123"
-        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      run: docker login -u "kejuwu" -p "kevinprohack123"
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
