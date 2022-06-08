@@ -56,7 +56,7 @@ namespace VetCoworking.Test.Controllers
             //ACT
             var response = await controller.GetById(Guid.Parse("8429de76-c123-4c7e-bdc6-c4711fb22917"), default);
             //ASSERT
-            response.StatusCode.Should().Be(404);
+            response.StatusCode.Should().Be(300);
         }
 
 
